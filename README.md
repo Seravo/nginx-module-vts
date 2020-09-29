@@ -71,6 +71,7 @@ Table of Contents
   * [vhost_traffic_status_histogram_buckets](#vhost_traffic_status_histogram_buckets)
   * [vhost_traffic_status_bypass_limit](#vhost_traffic_status_bypass_limit)
   * [vhost_traffic_status_bypass_stats](#vhost_traffic_status_bypass_stats)
+  * [vhost_traffic_status_no_cache_server_zone](#vhost_traffic_status_no_cache_server_zone)
 * [See Also](#see-also)
 * [TODO](#todo)
 * [Donation](#donation)
@@ -1796,6 +1797,19 @@ http {
     }
 }
 ```
+
+### vhost_traffic_status_no_cache_server_zone
+
+| -   | - |
+| --- | --- |
+| **Syntax**  | **vhost_traffic_status_no_cache_server_zone** *name* |
+| **Default** | - |
+| **Context** | http, server, location, if |
+
+`Description:` Create a group name that counts requests that do not use cache.
+The group is visible under serverZones. Example: set this value to "NO_CACHE".
+Note: This is not the same as missing or bypassing cache.
+These are requests that are configured not to use cache.
 
 ## See Also
 * Stream traffic status
